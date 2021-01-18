@@ -11,7 +11,6 @@ const Name = styled.h1`
   font-family: ${ theme.titleFont };
   color: ${ theme.white };
   font-weight: 600;
-  font-size: 3rem;
   margin-bottom: 0 !important;
 `
 const Desig = styled(Name)`
@@ -34,12 +33,13 @@ class Home extends Component {
             <Name>Madhav Gupta.</Name>
             <Desig>I write visible code.</Desig>
             <br/>
-            <Desc className="mx-auto">I am a CS sophomore, pursuing B.E. from
+            <Desc className="mx-md-auto">I am a CS sophomore, pursuing B.E. from
                 BITS Pilani. I am a frontend web developer and
                 graphic designer.
             </Desc>
             <br/>
             <Hello>Based in Delhi, India</Hello>
+            <p className = "test">Man</p>
           </div>
         </div>
       </div>
