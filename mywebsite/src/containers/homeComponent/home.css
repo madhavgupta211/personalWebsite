@@ -6,3 +6,7 @@
   color: white;
   font-size: 16px;
 }
+
+.tall-row {
+  height: 100vh;
+}

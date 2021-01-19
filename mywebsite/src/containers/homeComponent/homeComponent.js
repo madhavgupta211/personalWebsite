@@ -3,6 +3,16 @@ import theme from '../../theme';
 import './home.css';
 import styled from 'styled-components';
 
+const Namesmall = styled.h3`
+  font-family: ${ theme.titleFont };
+  color: ${ theme.white };
+  font-weight: 600;
+  line-height: 1em;
+`
+const Desigsmall = styled(Namesmall)`
+  color: ${ theme.primaryAccent };
+`
+
 const Hello = styled.p`
   font-family: ${ theme.paraFont };
   color: ${ theme.highlight };
@@ -11,7 +21,7 @@ const Name = styled.h1`
   font-family: ${ theme.titleFont };
   color: ${ theme.white };
   font-weight: 600;
-  margin-bottom: 0 !important;
+  line-height: 1em;
 `
 const Desig = styled(Name)`
   color: ${ theme.primaryAccent };
@@ -30,8 +40,10 @@ class Home extends Component {
           <div class = "col-12 text-left text-md-center">
             <Hello>Hi, my name is</Hello>
             <br/>
-            <Name>Madhav Gupta.</Name>
-            <Desig>I write visible code.</Desig>
+            <Name className="d-none d-md-block">Madhav Gupta.</Name>
+            <Namesmall className = "d-block d-md-none">Madhav Gupta.</Namesmall>
+            <Desig className = "d-none d-md-block">I write visible code.</Desig>
+            <Desigsmall className = "d-block d-md-none">I write visible code.</Desigsmall>
             <br/>
             <Desc className="mx-md-auto">I am a CS sophomore, pursuing B.E. from
                 BITS Pilani. I am a frontend web developer and
@@ -39,9 +51,9 @@ class Home extends Component {
             </Desc>
             <br/>
             <Hello>Based in Delhi, India</Hello>
-            <p className = "test">Man</p>
           </div>
         </div>
+        <div className = "row tall-row"></div>
       </div>
     );
   }
